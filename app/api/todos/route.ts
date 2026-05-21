@@ -18,13 +18,14 @@ export async function GET() {
 
 export async function POST(request: NextRequest) {
   try {
-    const { title } = await request.json()
+    const { userId, title } = await request.json()
 
-    if (!title || typeof title !== 'string') {
-      return NextResponse.json({ error: 'Title is required' }, { status: 400 })
+    if (!userId || !title || typeof title !== 'string') {
+      return NextResponse.json({ error: 'User ID and title are required' }, { status: 400 })
     }
 
     const [newTodo] = await db.insert(todos).values({
+      userId,
       title,
       completed: false,
     }).returning()
