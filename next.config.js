@@ -4,6 +4,7 @@ const nextConfig = {
   outputFileTracingExcludes: {
     '**/test/**': ['**/*'],
   },
+  outputFileTracingRoot: __dirname,
 }
 
 module.exports = nextConfig
