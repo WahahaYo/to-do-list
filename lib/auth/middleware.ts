@@ -16,14 +16,6 @@ export async function getAuthenticatedUser(request: NextRequest): Promise<Authen
     return null;
   }
 
-  if (process.env.NODE_ENV === 'development') {
-    return {
-      id: 'dev-user-id',
-      email: 'dev@example.com',
-      role: 'admin',
-    };
-  }
-
   try {
     const session = await db.select().from(sessions).where(eq(sessions.id, sessionId));
 
