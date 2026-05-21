@@ -4,6 +4,8 @@ import { users } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
 import bcrypt from "bcryptjs";
 
+export const runtime = "nodejs";
+
 export async function POST(request: NextRequest) {
   const { email, password, role = "admin" } = await request.json();
 

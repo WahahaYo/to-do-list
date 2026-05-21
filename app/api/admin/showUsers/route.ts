@@ -3,6 +3,8 @@ import { requireAdmin } from "@/lib/auth/middleware";
 import { db } from "@/lib/db";
 import { users } from "@/lib/db/schema";
 
+export const runtime = "nodejs";
+
 export async function GET(request: NextRequest) {
   const { user, response } = await requireAdmin(request);
   if (response) return response;

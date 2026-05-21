@@ -3,6 +3,8 @@ import { db } from '@/lib/db'
 import { todos } from '@/lib/db/schema'
 import { eq } from 'drizzle-orm'
 
+export const runtime = "nodejs";
+
 export async function PATCH(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }

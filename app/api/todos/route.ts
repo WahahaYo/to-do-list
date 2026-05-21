@@ -3,6 +3,8 @@ import { db, initDb } from '@/lib/db'
 import { todos } from '@/lib/db/schema'
 import { eq, desc } from 'drizzle-orm'
 
+export const runtime = "nodejs";
+
 export async function GET() {
   try {
     await initDb()

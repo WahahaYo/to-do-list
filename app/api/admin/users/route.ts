@@ -4,6 +4,8 @@ import { db } from "@/lib/db";
 import { users, todos } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
 
+export const runtime = "nodejs";
+
 export async function GET(request: NextRequest) {
   const { user, response } = await requireAdmin(request);
   if (response) return response;
