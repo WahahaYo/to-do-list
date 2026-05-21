@@ -17,12 +17,6 @@ export async function GET(request: NextRequest) {
         return NextResponse.json({ user: null });
       }
 
-      if (process.env.NODE_ENV === 'development') {
-        return NextResponse.json({
-          user: { id: 'dev-user-id', email: 'admin@qq.com', role: 'admin' }
-        });
-      }
-
       const sessionId = cookies.value;
       const session = await db.select().from(sessions).where(eq(sessions.id, sessionId));
 
