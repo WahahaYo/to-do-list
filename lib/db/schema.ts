@@ -2,6 +2,7 @@ import { pgTable, serial, text, boolean, timestamp, varchar, uuid } from 'drizzl
 
 export const todos = pgTable('todos', {
   id: serial('id').primaryKey(),
+  userId: uuid('user_id').notNull().references(() => users.id),
   title: text('title').notNull(),
   completed: boolean('completed').notNull().default(false),
   createdAt: timestamp('created_at').notNull().defaultNow(),
