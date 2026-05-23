@@ -79,8 +79,10 @@ export async function POST(request: NextRequest) {
         }, { status: 201 });
         response.cookies.set("auth_session", sessionId, {
           httpOnly: true,
-          secure: process.env.NODE_ENV === "production",
+          secure: process.env.NODE_ENV === "production" && process.env.FORCE_SECURE_COOKIE !== "false",
           maxAge: 3600,
+          path: "/",
+          sameSite: "lax",
         });
         return response;
       }
@@ -111,8 +113,10 @@ export async function POST(request: NextRequest) {
         });
         response.cookies.set("auth_session", sessionId, {
           httpOnly: true,
-          secure: process.env.NODE_ENV === "production",
+          secure: process.env.NODE_ENV === "production" && process.env.FORCE_SECURE_COOKIE !== "false",
           maxAge: 3600,
+          path: "/",
+          sameSite: "lax",
         });
         return response;
       }
