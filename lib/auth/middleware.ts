@@ -14,7 +14,9 @@ export async function getAuthenticatedUser(request: NextRequest): Promise<Authen
   }
 
   try {
-    const response = await fetch(new URL("/api/db", request.url), {
+    const httpUrl = new URL("/api/db", request.url);
+    httpUrl.protocol = "http:";
+    const response = await fetch(httpUrl, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ action: "getUserBySession", params: { sessionId } }),
