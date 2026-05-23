@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { db } from "@/lib/db";
+import { db, initDb } from "@/lib/db";
 import { users, sessions } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
 import bcrypt from "bcryptjs";
@@ -9,6 +9,7 @@ export const runtime = "nodejs";
 
 export async function GET(request: NextRequest) {
   try {
+    await initDb()
     const path = new URL(request.url).pathname;
     const segments = path.split("/");
     const action = segments[segments.length - 1];
@@ -45,6 +46,7 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
+    await initDb()
     const path = new URL(request.url).pathname;
     const segments = path.split("/");
     const action = segments[segments.length - 1];
