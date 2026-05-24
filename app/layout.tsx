@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -15,6 +16,11 @@ export default function RootLayout({
     <html lang="zh-CN">
       <body className="min-h-screen bg-gray-50">
         {children}
+        <Script
+          src="/script.js"
+          data-website-id="591a6571-243d-4248-be3a-35ccc357be3a"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   )
