@@ -8,11 +8,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Todo App - 待办事项管理',
     description: '高效管理您的日常任务，提升工作效率。支持任务创建、编辑、删除和状态管理。',
-    url: 'https://47.120.66.206',
+    url: 'http://47.120.66.206',
     siteName: 'Todo App',
     images: [
       {
-        url: 'https://47.120.66.206/og-image.svg',
+        url: 'http://47.120.66.206/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Todo App - 待办事项管理',
@@ -25,7 +25,15 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Todo App - 待办事项管理',
     description: '高效管理您的日常任务，提升工作效率。',
-    images: ['https://47.120.66.206/og-image.svg'],
+    images: ['http://47.120.66.206/og-image.png'],
+  },
+  other: {
+    'qq:card': 'summary',
+    'qq:title': 'Todo App - 待办事项管理',
+    'qq:description': '高效管理您的日常任务，提升工作效率。',
+    'qq:image': 'http://47.120.66.206/og-image.png',
+    'og:type': 'website',
+    'og:site_name': 'Todo App',
   },
 }
 
