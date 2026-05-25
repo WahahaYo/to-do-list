@@ -17,7 +17,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-gray-50">
         {children}
         <Script
-          src="/script.js"
+          src="https://47.120.66.206:3000/script.js"
           data-website-id="591a6571-243d-4248-be3a-35ccc357be3a"
           strategy="afterInteractive"
         />

@@ -30,12 +30,12 @@ export default function DashboardPage() {
       try {
         const response = await fetch("/api/auth/session");
         const result = await response.json();
-        
+
         if (!response.ok || !result.user) {
           router.push("/login");
           return;
         }
-        
+
         setUser(result.user);
       } catch (err) {
         router.push("/login");
@@ -77,7 +77,7 @@ export default function DashboardPage() {
       body: JSON.stringify({ completed }),
     });
     if (response.ok) {
-      setTodoList(todoList.map(todo => 
+      setTodoList(todoList.map(todo =>
         todo.id === id ? { ...todo, completed } : todo
       ));
     }
@@ -136,6 +136,19 @@ export default function DashboardPage() {
           onDeleteTodo={handleDeleteTodo}
         />
       </div>
+
+      <footer className="bg-white border-t border-gray-200 mt-8">
+        <div className="container mx-auto px-4 py-6">
+          <div className="flex justify-center gap-6">
+            <a href="/privacy" className="text-blue-500 hover:text-blue-600 transition-colors">
+              隐私政策
+            </a>
+            <a href="/terms" className="text-blue-500 hover:text-blue-600 transition-colors">
+              用户协议
+            </a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

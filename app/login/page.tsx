@@ -93,6 +93,17 @@ export default function LoginPage() {
             立即注册
           </a>
         </p>
+
+        <footer className="mt-6 pt-4 border-t border-gray-200">
+          <div className="flex justify-center gap-6">
+            <a href="/privacy" className="text-blue-500 hover:text-blue-600 transition-colors text-sm">
+              隐私政策
+            </a>
+            <a href="/terms" className="text-blue-500 hover:text-blue-600 transition-colors text-sm">
+              用户协议
+            </a>
+          </div>
+        </footer>
       </div>
     </div>
   );

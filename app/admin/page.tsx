@@ -20,7 +20,7 @@ export default function AdminPage() {
     const fetchSession = async () => {
       const response = await fetch("/api/auth/session");
       const result = await response.json();
-      
+
       if (!response.ok || !result.user) {
         router.push("/login");
         return;
@@ -97,7 +97,7 @@ export default function AdminPage() {
           <h2 className="text-xl font-semibold text-gray-800 mb-4">
             注册用户列表
           </h2>
-          
+
           {users.length === 0 ? (
             <div className="text-gray-500 text-center py-8">
               暂无注册用户
@@ -132,11 +132,10 @@ export default function AdminPage() {
                       </td>
                       <td className="px-4 py-3 text-sm border-b">
                         <span
-                          className={`px-2 py-1 rounded-full text-xs font-medium ${
-                            user.role === "admin"
+                          className={`px-2 py-1 rounded-full text-xs font-medium ${user.role === "admin"
                               ? "bg-red-100 text-red-800"
                               : "bg-green-100 text-green-800"
-                          }`}
+                            }`}
                         >
                           {user.role === "admin" ? "管理员" : "普通用户"}
                         </span>
@@ -156,6 +155,19 @@ export default function AdminPage() {
           </div>
         </div>
       </div>
+
+      <footer className="bg-white border-t border-gray-200 mt-8">
+        <div className="container mx-auto px-4 py-6">
+          <div className="flex justify-center gap-6">
+            <a href="/privacy" className="text-blue-500 hover:text-blue-600 transition-colors">
+              隐私政策
+            </a>
+            <a href="/terms" className="text-blue-500 hover:text-blue-600 transition-colors">
+              用户协议
+            </a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
