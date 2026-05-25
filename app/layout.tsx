@@ -89,7 +89,7 @@ export default function RootLayout({
           src="https://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js"
           strategy="afterInteractive"
         />
-        <Script strategy="afterInteractive">
+        <Script id="qq-share-script" strategy="afterInteractive">
           {`
             // QQ分享初始化
             window.addEventListener('load', function() {
