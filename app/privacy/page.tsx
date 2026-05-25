@@ -13,12 +13,12 @@ export default function PrivacyPage() {
 
         <section className="mb-8">
           <h2 className="text-xl font-semibold text-gray-800 mb-4">1. 引言</h2>
-          <p className="text-gray-600 mb-4">欢迎使用 Todo App（以下简称"本应用"）。我们重视您的隐私，致力于保护您的个人信息安全。本隐私政策旨在说明我们如何收集、使用、存储和保护您的个人信息，以及您享有的相关权利。</p>
+          <p className="text-gray-600 mb-4">欢迎使用 Todo App（以下简称&#34;本应用&#34;）。我们重视您的隐私，致力于保护您的个人信息安全。本隐私政策旨在说明我们如何收集、使用、存储和保护您的个人信息，以及您享有的相关权利。</p>
         </section>
 
         <section className="mb-8">
           <h2 className="text-xl font-semibold text-gray-800 mb-4">2. 我们收集的信息</h2>
-          
+
           <h3 className="text-lg font-medium text-gray-700 mb-3">2.1 账户注册信息</h3>
           <ul className="text-gray-600 mb-4 list-disc list-inside">
             <li><strong>邮箱地址</strong>：用于身份验证和账户管理</li>
@@ -41,7 +41,7 @@ export default function PrivacyPage() {
 
         <section className="mb-8">
           <h2 className="text-xl font-semibold text-gray-800 mb-4">3. 数据使用方式</h2>
-          
+
           <h3 className="text-lg font-medium text-gray-700 mb-3">3.1 核心服务</h3>
           <ul className="text-gray-600 mb-4 list-disc list-inside">
             <li>提供账户注册、登录和身份验证服务</li>
@@ -81,7 +81,7 @@ export default function PrivacyPage() {
 
         <section className="mb-8">
           <h2 className="text-xl font-semibold text-gray-800 mb-4">7. 用户权利</h2>
-          
+
           <h3 className="text-lg font-medium text-gray-700 mb-3">7.1 访问权</h3>
           <p className="text-gray-600 mb-4">您可以访问和查看您的个人信息和应用数据。</p>
 
@@ -116,7 +116,7 @@ export default function PrivacyPage() {
 
         <section className="mb-8">
           <h2 className="text-xl font-semibold text-gray-800 mb-4">10. 政策更新</h2>
-          <p className="text-gray-600">我们可能会不时更新本隐私政策。更新后的政策将在本页面发布，并更新"生效日期"。重大变更我们将通过适当方式通知您。</p>
+          <p className="text-gray-600">我们可能会不时更新本隐私政策。更新后的政策将在本页面发布，并更新&#34;生效日期&#34;。重大变更我们将通过适当方式通知您。</p>
         </section>
 
         <section className="mb-8">

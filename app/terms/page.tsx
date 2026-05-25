@@ -13,7 +13,7 @@ export default function TermsPage() {
 
         <section className="mb-8">
           <h2 className="text-xl font-semibold text-gray-800 mb-4">1. 协议接受</h2>
-          <p className="text-gray-600">通过访问或使用 Todo App（以下简称"本应用"），您表示同意接受本用户协议的约束。如果您不同意本协议，请不要使用本应用。</p>
+          <p className="text-gray-600">通过访问或使用 Todo App（以下简称&#34;本应用&#34;），您表示同意接受本用户协议的约束。如果您不同意本协议，请不要使用本应用。</p>
         </section>
 
         <section className="mb-8">
@@ -71,7 +71,7 @@ export default function TermsPage() {
 
         <section className="mb-8">
           <h2 className="text-xl font-semibold text-gray-800 mb-4">8. 免责声明</h2>
-          <p className="text-gray-600 mb-4">本服务按"现状"提供，不保证100%可用性。本应用对以下情况不承担责任：</p>
+          <p className="text-gray-600 mb-4">本服务按&#34;现状&#34;提供，不保证100%可用性。本应用对以下情况不承担责任：</p>
           <ul className="text-gray-600 list-disc list-inside">
             <li>服务中断或故障导致的损失</li>
             <li>用户数据丢失或损坏</li>
@@ -87,7 +87,7 @@ export default function TermsPage() {
 
         <section className="mb-8">
           <h2 className="text-xl font-semibold text-gray-800 mb-4">10. 协议更新</h2>
-          <p className="text-gray-600">本应用有权随时更新本协议。更新后的协议将在本页面发布，并更新"生效日期"。继续使用服务即表示同意更新后的协议。</p>
+          <p className="text-gray-600">本应用有权随时更新本协议。更新后的协议将在本页面发布，并更新&#34;生效日期&#34;。继续使用服务即表示同意更新后的协议。</p>
         </section>
 
         <section className="mb-8">
